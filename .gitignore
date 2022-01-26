@@ -1,0 +1,7 @@
+homekit-scd4x
+SCD4X
+SCD-40
+SCD-41
+.vscode
+*.code-workspace
+.DS_Store

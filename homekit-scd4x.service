@@ -1,0 +1,13 @@
+[Unit]
+Description=HomeKit SCD4x-exporter service
+After=network.target scd4x-exporter.service
+
+[Service]
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/dev/homekit-scd4x
+ExecStart=/home/pi/dev/homekit-scd4x/homekit-scd4x --port=1006
+ExecReload=/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
