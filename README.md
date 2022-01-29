@@ -1,6 +1,6 @@
 # HomeKit SCD4x
 
-An [Apple HomeKit](https://developer.apple.com/homekit/) accessory for the [SCD4x](https://www.adafruit.com/product/5190) temperature and humidity sensor running on a Raspberry Pi.
+An [Apple HomeKit](https://developer.apple.com/homekit/) accessory for the [SCD4x](https://www.adafruit.com/product/5190) CO2 (Carbon Dioxide), temperature and humidity sensor running on a Raspberry Pi.
 
 ![The accessory added to iOS](_images/homekit-scd4x.jpg)
 
@@ -8,7 +8,7 @@ An [Apple HomeKit](https://developer.apple.com/homekit/) accessory for the [SCD4
 
 * [**Go**](http://golang.org/doc/install) - this accessory is written in Go
 * [**HomeControl**](https://github.com/brutella/hc) - to expose climate readings from the Enviro+ as an Apple HomeKit accessory
-* [**ESP32 exporter**](https://github.com/sighmon/co2_sensor_scd4x_esp32_http_server) - to read the SCD4x sensor and export it for scraping by [Prometheus](https://prometheus.io)
+* [**SCD4x exporter for ESP32**](https://github.com/sighmon/co2_sensor_scd4x_esp32_http_server) - to read the SCD4x sensor and export it for scraping by [Prometheus](https://prometheus.io)
 
 ## Installation
 
