@@ -153,13 +153,12 @@ func main() {
 			humidity.CurrentRelativeHumidity.SetValue(readings.Humidity.Value)
 			humidity.CurrentRelativeHumidity.SetStepValue(0.1)
 			carbonDioxide.SetValue(readings.CO2.Value)
-			carbonDioxide.SetStepValue(1)
 			// 850 ppm over 8 hours considered maximum in Australia
 			// https://www.abcb.gov.au/resource/handbook/indoor-air-quality-verification-methods-handbook
 			if readings.CO2.Value > 850 {
-				co2Detected.SetValue(1)
+				co2.CarbonDioxideDetected.SetValue(1)
 			} else {
-				co2Detected.SetValue(0)
+				co2.CarbonDioxideDetected.SetValue(0)
 			}
 
 			log.Println(fmt.Sprintf("Temperature: %f°C", readings.Temperature.Value))
