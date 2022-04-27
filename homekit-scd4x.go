@@ -57,9 +57,7 @@ func main() {
 	acc.TempSensor.AddLinkedService(humidity.Service)
 
 	co2 := service.NewCarbonDioxideSensor()
-	co2Detected := characteristic.NewCarbonDioxideDetected()
 	carbonDioxide := characteristic.NewCarbonDioxideLevel()
-	co2.Service.AddCharacteristic(co2Detected.Characteristic)
 	co2.Service.AddCharacteristic(carbonDioxide.Characteristic)
 	acc.AddService(co2.Service)
 	acc.TempSensor.AddLinkedService(co2.Service)
